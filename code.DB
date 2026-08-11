@@ -1,0 +1,220 @@
+const mongoose = require("mongoose");
+
+// ===============================
+// 1. DATABASE CONNECTION
+// ===============================
+
+const MONGO_URI = "mongodb://127.0.0.1:27017/smart_planner";
+
+mongoose.connect(MONGO_URI)
+    .then(() => {
+        console.log("MongoDB connected successfully!");
+    })
+    .catch((error) => {
+        console.error("MongoDB connection failed:", error.message);
+    });
+
+
+// ===============================
+// 2. USER SCHEMA
+// ===============================
+
+const userSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+
+    password: {
+        type: String,
+        required: true
+    }
+});
+
+const User = mongoose.model("User", userSchema);
+
+
+// ===============================
+// 3. DESTINATION SCHEMA
+// ===============================
+
+const destinationSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+
+    state: {
+        type: String,
+        required: true
+    },
+
+    description: {
+        type: String
+    },
+
+    location: {
+        type: String
+    },
+
+    image: {
+        type: String
+    },
+
+    popularPlaces: {
+        type: [String]
+    }
+});
+
+const Destination = mongoose.model(
+    "Destination",
+    destinationSchema
+);
+
+
+// ===============================
+// 4. ITINERARY SCHEMA
+// ===============================
+
+const itinerarySchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+
+    destination: {
+        type: String,
+        required: true
+    },
+
+    startDate: {
+        type: Date,
+        required: true
+    },
+
+    endDate: {
+        type: Date,
+        required: true
+    },
+
+    activities: {
+        type: [String]
+    },
+
+    notes: {
+        type: String
+    }
+});
+
+const Itinerary = mongoose.model(
+    "Itinerary",
+    itinerarySchema
+);
+
+
+// ===============================
+// 5. EXPENSE SCHEMA
+// ===============================
+
+const expenseSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+
+    category: {
+        type: String,
+        enum: [
+            "Food",
+            "Transport",
+            "Accommodation",
+            "Shopping",
+            "Activities",
+            "Other"
+        ]
+    },
+
+    amount: {
+        type: Number,
+        required: true
+    },
+
+    description: {
+        type: String
+    },
+
+    date: {
+        type: Date,
+        default: Date.now
+    }
+});
+
+const Expense = mongoose.model(
+    "Expense",
+    expenseSchema
+);
+
+
+// ===============================
+// 6. RESTAURANT BOOKING SCHEMA
+// ===============================
+
+const restaurantBookingSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+
+    restaurantName: {
+        type: String,
+        required: true
+    },
+
+    location: {
+        type: String
+    },
+
+    bookingDate: {
+        type: Date,
+        required: true
+    },
+
+    bookingTime: {
+        type: String,
+        required: true
+    },
+
+    numberOfPeople: {
+        type: Number,
+        required: true
+    },
+
+    status: {
+        type: String,
+        default: "Confirmed"
+    }
+});
+
+const RestaurantBooking = mongoose.model(
+    "RestaurantBooking",
+    restaurantBookingSchema
+);
+
+
+// ===============================
+// 7. EXPORT ALL MODELS
+// ===============================
+
+module.exports = {
+    User,
+    Destination,
+    Itinerary,
+    Expense,
+    RestaurantBooking
+};
