@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Planner for Your Getaways</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #2196f3, #12b8b0);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #087ea4;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #087ea4;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-card {
+            padding: 18px;
+            background: #f1f9fc;
+            border-radius: 8px;
+            border-left: 4px solid #159bb5;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .tech {
+            display: inline-block;
+            background: #e8f4f8;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            color: #087ea4;
+            font-weight: bold;
+        }
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .destination {
+            background: #f7fafb;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .screenshots img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .objective {
+            background: #eaf8f8;
+            border-left: 5px solid #12aaa8;
+        }
+
+        footer {
+            background: #1f2933;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌴 Smart Planner for Your Getaways</h1>
+    <p>Your Smart Travel Companion for Exploring South India</p>
+</header>
+
+<div class="container">
+
+    <!-- About Project -->
+    <section>
+        <h2>📌 About the Project</h2>
+
+        <p>
+            <strong>Smart Planner for Your Getaways</strong> is a web-based
+            travel planning application mainly focused on exploring and
+            planning trips across <strong>South India</strong>.
+        </p>
+
+        <p>
+            The platform provides users with a convenient way to explore
+            destinations, create personalized itineraries, manage travel
+            expenses, and book restaurants, making the entire trip-planning
+            process easier and more organized.
+        </p>
+    </section>
+
+    <!-- Features -->
+    <section>
+        <h2>✨ Key Features</h2>
+
+        <div class="features">
+
+            <div class="feature-card">
+                <h3>🗺️ Explore Destinations</h3>
+                <p>
+                    Discover popular tourist destinations across South India.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📍 Location Details</h3>
+                <p>
+                    Explore important places, cities, sightseeing spots and
+                    attractions.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📅 Itinerary Planner</h3>
+                <p>
+                    Create and organize personalized day-by-day travel plans.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💰 Expense Tracker</h3>
+                <p>
+                    Record and monitor travel expenses and manage your budget.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🍽️ Restaurant Booking</h3>
+                <p>
+                    Find and book restaurants during your trip.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌴 South India Focused</h3>
+                <p>
+                    Explore destinations across Kerala, Tamil Nadu,
+                    Karnataka, Andhra Pradesh and Telangana.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section>
+        <h2>🛠️ Technologies Used</h2>
+
+        <span class="tech">HTML</span>
+        <span class="tech">CSS</span>
+        <span class="tech">JavaScript</span>
+        <span class="tech">React.js</span>
+        <span class="tech">Node.js</span>
+        <span class="tech">MongoDB</span>
+        <span class="tech">VS Code</span>
+        <span class="tech">Git & GitHub</span>
+    </section>
+
+    <!-- Destinations -->
+    <section>
+        <h2>🌏 South Indian Destinations</h2>
+
+        <div class="destinations">
+
+            <div class="destination">
+                <h3>🌴 Kerala</h3>
+                <p>
+                    Kochi, Alleppey, Wayanad, Munnar, Thekkady
+                </p>
+            </div>
+
+            <div class="destination">
+                <h3>🏖️ Tamil Nadu</h3>
+                <p>
+                    Chennai, Ooty, Kodaikanal, Madurai, Rameswaram
+                </p>
+            </div>
+
+            <div class="destination">
+                <h3>🏛️ Karnataka</h3>
+                <p>
+                    Bengaluru, Mysuru, Coorg, Hampi
+                </p>
+            </div>
+
+            <div class="destination">
+                <h3>🌊 Andhra Pradesh</h3>
+                <p>
+                    Tirupati, Visakhapatnam, Vijayawada
+                </p>
+            </div>
+
+            <div class="destination">
+                <h3>🏙️ Telangana</h3>
+                <p>
+                    Hyderabad, Warangal
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section>
+        <h2>📸 Project Screenshots</h2>
+
+        <div class="screenshots">
+
+            <div>
+                <h3>Explore Destinations</h3>
+                <img src="Destination page.jpeg"
+                     alt="Explore Destinations Page">
+            </div>
+
+            <div>
+                <h3>Destination Exploration</h3>
+                <img src="Exploration page.jpeg"
+                     alt="Destination Exploration Page">
+            </div>
+
+            <div>
+                <h3>Kerala Destination</h3>
+                <img src="kerala.jpeg"
+                     alt="Kerala Destination Page">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Objective -->
+    <section class="objective">
+        <h2>🎯 Project Objective</h2>
+
+        <p>
+            The main objective of this project is to develop an
+            <strong>all-in-one smart travel planning platform</strong>
+            that helps users explore South India, organize itineraries,
+            track expenses, and manage restaurant bookings from a single
+            application.
+        </p>
+    </section>
+
+    <!-- Future Enhancements -->
+    <section>
+        <h2>🚀 Future Enhancements</h2>
+
+        <ul>
+            <li>AI-based personalized itinerary recommendations</li>
+            <li>Live weather and location information</li>
+            <li>Google Maps integration</li>
+            <li>Hotel and transportation booking</li>
+            <li>User reviews and ratings</li>
+            <li>Expense sharing among travelers</li>
+            <li>Mobile application</li>
+        </ul>
+    </section>
+
+    <!-- Project Information -->
+    <section>
+        <h2>👩‍💻 Project Information</h2>
+
+        <p>
+            <strong>Project Name:</strong>
+            Smart Planner for Your Getaways
+        </p>
+
+        <p>
+            <strong>Project Type:</strong>
+            Team Project
+        </p>
+
+        <p>
+            This project was developed to simplify travel planning and
+            provide a seamless getaway-planning experience across
+            South India.
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p>🌴 Smart Planner for Your Getaways</p>
+    <p>Made with ❤️ for smarter travel planning</p>
+</footer>
+
+</body>
+</html>
